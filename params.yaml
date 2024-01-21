@@ -1,4 +1,4 @@
 ElasticNet:
-  alpha: 0.5
-  l1_ratio: 0.7
+  alpha:  0.010002549769393096
+  l1_ratio: 1.953095553341934e-05
   

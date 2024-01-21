@@ -3,6 +3,7 @@ from MLOpsProject.pipeline.stage_01_data_ingestion import DataIngestionTrainingP
 from MLOpsProject.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
 from MLOpsProject.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
 from MLOpsProject.pipeline.stage_04_model_trainer import ModelTrainingPipeline
+from MLOpsProject.pipeline.stage_05_model_evaluation import ModelEvaluationPipeline
 STAGE_NAME = "Data Ingestion stage"
 if __name__ == "__main__":
     try :
@@ -32,6 +33,14 @@ if __name__ == "__main__":
     try :
         model_trainer_pipeline = ModelTrainingPipeline()
         model_trainer_pipeline.main()
+    except Exception as e:
+        logger.exception(e)
+        raise e
+STAGE_NAME = "Model Evaluation stage"
+if __name__ == "__main__":
+    try :
+        model_evaluation_pipeline = ModelEvaluationPipeline()
+        model_evaluation_pipeline.main()
     except Exception as e:
         logger.exception(e)
         raise e

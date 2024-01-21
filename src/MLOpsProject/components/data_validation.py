@@ -1,6 +1,6 @@
 import os 
 import pandas as pd
-from MLOpsProject.config.configuration import DataValidationConfig
+from MLOpsProject.entity.config_entity import DataValidationConfig
 from MLOpsProject import logger
 
 class DataValidation:
